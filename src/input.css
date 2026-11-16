@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.clinic-header {
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+}
+
+.clinic-menu,
+.clinic-language {
+  min-width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.clinic-language {
+  padding-inline: 12px;
+  white-space: nowrap;
+}
+
+.clinic-greeting {
+  min-width: 0;
+}
+
+.clinic-greeting h1 {
+  font-size: 14px;
+  line-height: 1.6;
+  text-wrap: balance;
+}
+
+.clinic-new-appointment {
+  grid-column: 1 / -1;
+  min-height: 44px;
+  padding: 10px 16px;
+  white-space: nowrap;
+}
+
+.clinic-new-appointment svg {
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .clinic-header {
+    grid-template-columns: 40px minmax(0, 1fr) auto auto;
+    min-height: 76px;
+    padding: 12px 24px;
+  }
+
+  .clinic-greeting h1 {
+    font-size: 18px;
+  }
+
+  .clinic-new-appointment {
+    grid-column: auto;
+    padding-inline: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .clinic-header {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .clinic-header {
+    padding-inline: 36px;
+  }
+}
